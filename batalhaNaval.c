@@ -1,14 +1,52 @@
 #include <stdio.h>
 
-// Desafio Batalha Naval - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
-// Siga os comentários para implementar cada parte do desafio.
-
 int main() {
-    // Nível Novato - Posicionamento dos Navios
-    // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
-    // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
-    // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
+   
+    int tabuleiro_naval[10][10] = {
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+    };
+
+    tabuleiro_naval[3][4] = 3;
+    tabuleiro_naval[3][5] = 3;
+    tabuleiro_naval[3][6] = 3;
+
+    tabuleiro_naval[4][9] = 3;
+    tabuleiro_naval[5][9] = 3;
+    tabuleiro_naval[6][9] = 3;
+
+    printf("Coordenadas do primeiro navio (horizontal):\n");
+    printf("(3 , 4) - (3 , 5) - (3 , 6)\n");
+
+    printf("Coordenadas do segundo navio (vertical):\n");
+    printf("(4 , 9) - (5 , 9) - (6 , 9)\n");
+
+    printf("\n--->TABULEIRO DE BATALHA NAVAL<---\n");
+    printf("   0 1 2 3 4 5 6 7 8 9\n");
+    for (int linha = 0; linha < 10; linha++){
+        printf("%d  ", linha);
+        for (int T = 0; T < 10; T++){
+            if (tabuleiro_naval[linha][T] == 3){
+                printf("3 ");
+            }else{
+                printf("~ ");
+            }
+        }
+        
+        printf("\n");
+    }
+    
+
+      
+
 
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
